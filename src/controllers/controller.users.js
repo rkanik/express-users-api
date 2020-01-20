@@ -1,5 +1,5 @@
 
-const USERS = require("../models/model.users")
+const USERS = require("../models/model.user")
 
 const GET_USERS = async (req, res) => {
 
@@ -14,6 +14,11 @@ const GET_USERS = async (req, res) => {
       result: dbRes.length,
       data: dbRes
    })
+}
+
+const DELETE_USERS = async (req, res) => {
+   let response = await USERS.deleteMany()
+   res.json(response)
 }
 
 const CREATE_USER = async (req, res) => {
@@ -35,4 +40,4 @@ const CREATE_USER = async (req, res) => {
    }
 }
 
-module.exports = { GET_USERS, CREATE_USER }
+module.exports = { GET_USERS, DELETE_USERS, CREATE_USER }
