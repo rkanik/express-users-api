@@ -15,6 +15,6 @@ app.use(express.static("public"))
 
 /** Routes */
 app.use("/api/v1/users", require("../routes/router.users"))
-app.use("/api/v1/user", require("../routes/router.auth"))
+app.use("/api/v1/", require("../routes/router.auth"))
 
 module.exports = app

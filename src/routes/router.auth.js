@@ -1,6 +1,7 @@
 
 const router = require('express').Router();
 
+//const AUTH = require("../auth/auth.verify-token")
 const authController = require("../controllers/controller.auth")
 
 router.post("/signin", authController.SIGN_IN)
